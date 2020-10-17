@@ -15,11 +15,12 @@ declare(strict_types=1);
 <body>
 <div class="login-page">
     <div class="form">
-        <form class="login-form">
-            <input type="text" placeholder="username"/>
+        <form class="register-form">
+            <input type="text" placeholder="name"/>
             <input type="password" placeholder="password"/>
-            <button onclick="location.href='main.php'" type="button">login</button>
-            <p class="message">Not registered? <a href="register.php">Create an account</a></p>
+            <input type="text" placeholder="email address"/>
+            <button onclick="location.href='index.php'" type="button">create</button>
+            <p class="message">Already registered? <a href="index.php">Sign In</a></p>
         </form>
     </div>
 </div>
