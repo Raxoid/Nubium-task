@@ -1,6 +1,19 @@
 <?php
-
 declare(strict_types=1);
+
+include './model/Database.php';
+
+$dbhost = 'localhost';
+$dbuser = 'root';
+$dbpass = '';
+$dbname = 'nubiumtask';
+$dsn = 'mysql:host=127.0.0.1;dbname=nubiumtask';
+
+//$db = new Database($dbhost, $dbuser, $dbpass, $dbname);
+
+$database = new Nette\Database\Connection($dsn, $dbuser, $dbpass);
+
+$result = $database->query('SELECT * FROM users');
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +22,7 @@ declare(strict_types=1);
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/style.css">
-    <title>{ifset title}{include title|stripHtml} | {/ifset}Nette Web</title>
+    <title>Nubium Web</title>
 </head>
 
 <body>
